@@ -1,0 +1,449 @@
+#navigation_bar,
+#portada_texto,
+#invitacion_fiesta,
+#carrousel_fotos,
+#regalos,
+#firmas,
+#map,
+#footer {
+  .h1 {
+    @extend .titulos1;
+    text-align: center;
+    margin: auto;
+    max-width: 70%;
+  }
+  .h2 {
+    @extend .titulos2;
+    text-align: center;
+    margin: auto;
+    max-width: 70%;
+  }
+  .h3 {
+    @extend .titulos3;
+    text-align: center;
+    margin: auto;
+    max-width: 70%;
+  }
+
+  .h4 {
+    @extend .titulos4;
+    text-align: center;
+    margin: auto;
+    max-width: 70%;
+  }
+
+  .textos {
+    padding-top: 1%;
+  }
+}
+
+#navigation_bar {
+  .navigation_bar {
+    display: flex;
+    background-color: $rojo_principal;
+    color: #fefefe;
+    justify-content: space-around;
+
+    .header_izq {
+      // text-align: left;
+      // margin-right: 30px;
+      // text-align: center;
+      // max-width: 100%;
+
+      .h4 {
+        max-width: 100%;
+      }
+
+      a {
+        text-decoration: none;
+        // margin-right: 30px;
+      }
+    }
+    .textos {
+      color: #fefefe;
+      font-size: 14px;
+      padding: 5% 0;
+    }
+  }
+  .nav {
+    text-align: right;
+
+    .nav-item {
+      list-style: none;
+      .nav-link {
+        margin-top: 18px;
+      }
+    }
+  }
+
+  .nav-item a:hover {
+    background-color: $color_hover;
+    border-radius: 20%;
+    height: 40px;
+  }
+}
+
+#portada_foto {
+  // background-color: red;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+    url(../assets/juliprodu_horizontal.jpg);
+  // background-image: url(../assets/juliprodu_horizontal.jpg);
+  // min-height: 200vh;
+  height: 587px;
+  background-position: center center;
+  background-size: cover;
+  padding: 2% 0px;
+}
+
+#portada_texto {
+  background-color: $fondo_gris;
+  .heading {
+    display: flex;
+    justify-content: space-around;
+    .texto_heading {
+      // padding-top: 10%;
+    }
+  }
+  .p_heading {
+    padding: 5% 20%;
+  }
+}
+#invitacion_fiesta {
+  background-color: #fefefe;
+}
+.separador {
+  .custom-shape-divider-top-1711732508 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-top-1711732508 svg {
+    position: relative;
+    display: block;
+    width: calc(129% + 1.3px);
+    height: 87px;
+  }
+
+  .custom-shape-divider-top-1711732508 .shape-fill {
+    fill: $fondo_gris;
+  }
+}
+
+// }
+
+.btn {
+  font-family: $textos;
+}
+
+.separador_gris {
+  max-width: 100%;
+}
+
+#carrousel_fotos {
+  * {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+  }
+
+  *::-webkit-scrollbar {
+    width: 0;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+
+  * {
+    -ms-overflow-style: none;
+  }
+
+  padding: 2% 0px;
+  background-color: $fondo_gris;
+  .carousel {
+    ol,
+    li {
+      // background-color: red;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    position: relative;
+    // width: 100%;
+    height: 50vh;
+    perspective: 100px;
+    overflow: hidden;
+
+    .carousel__viewport {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      overflow-x: scroll;
+      counter-reset: item;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+    }
+
+    .carousel::before,
+    .carousel::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      translate: -50% 0;
+      width: 500%;
+      height: 500%;
+      border-radius: 50%;
+      background: $fondo_gris;
+    }
+
+    .carousel::before {
+      top: -480%;
+    }
+
+    .carousel::after {
+      bottom: -480%;
+    }
+
+    .carousel__slide {
+      position: relative;
+      flex: 0 0 28.33%;
+      width: 25%;
+      counter-increment: item;
+    }
+
+    .carousel__slide:before {
+      content: counter(item);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -40%, 70px);
+    }
+
+    .carousel__snapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      scroll-snap-align: center;
+      background-size: cover;
+      background-position: 50%;
+      border: 10px solid;
+      color: $fondo_gris;
+    }
+  }
+}
+
+#regalos {
+  padding: 10% 0;
+  #mybtn {
+    margin-top: 2%;
+  }
+}
+/* Estilos para el modal (fondo) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: $textos;
+  background-color: #fefefe95;
+}
+
+/* Estilos para el contenido del modal */
+.modal-content {
+  border: 1px solid #888;
+  box-shadow: 0px 0px 15px 10px grey;
+  border: 1px solid #888;
+  // width: 50%;
+  max-width: 30%;
+  border-radius: 100px;
+  padding: 2%;
+  padding-top: 0;
+  margin: 15% 35%;
+}
+.textcontent {
+  background-color: #fefefe;
+  font-family: $textos;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para el botón de cierre */
+.close {
+  color: #aaa;
+  text-align: right;
+  // float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#firmas {
+  // background-color: blueviolet;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.19)
+    ),
+    url(../assets/flores_Grupo02_A.png);
+  padding: 2% 0px;
+  background-size: 100%;
+  padding-top: 7%;
+  padding-bottom: 4%;
+  // position: sticky;
+  // .form_firmas {
+  //   max-width: 25%;
+  //   margin: auto;
+  //   background-color: rgba(255, 0, 0, 0);
+  //   border-radius: 40px;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: stretch;
+  // .nombre,
+  // .mensaje {
+  //   border-radius: 5px;
+  //   border: none;
+}
+// }
+// }
+#map {
+  margin: 3% 0;
+  .mapita {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2% 0px;
+    .derecha {
+      flex-direction: column;
+      display: flex;
+      .foto_salon {
+        max-width: 50%;
+        margin: auto;
+      }
+    }
+  }
+}
+#footer {
+  .footer {
+    display: flex;
+    background-color: $rojo_principal;
+    color: #fefefe;
+    justify-content: space-around;
+
+    .footer_izq {
+      text-align: left;
+      // margin-right: 30px;
+      text-align: center;
+      // max-width: 100%;
+      padding-top: 3vh;
+
+      .h4 {
+        max-width: 100%;
+      }
+
+      a {
+        text-decoration: none;
+        // margin-right: 30px;
+      }
+      .textos {
+        color: #fefefe;
+        font-size: 14px;
+      }
+    }
+    .footer_der {
+      text-align: right;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #fefefe;
+        }
+
+        a:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #navigation_bar,
+  #portada_texto,
+  #invitacion_fiesta,
+  #carrousel_fotos,
+  #regalos,
+  #firmas,
+  #map,
+  #footer {
+    .h1 {
+      font-size: 85px;
+    }
+    .h2 {
+      font-size: 40px;
+    }
+    .h3 {
+    }
+
+    .h4 {
+    }
+
+    .textos {
+    }
+  }
+  // header
+  #navigation_bar .navigation_bar {
+    // .h4,
+    // .textos {
+    //   text-align: center;
+    // }
+    justify-content: center;
+
+    .nav .nav-item {
+      display: none;
+    }
+  }
+
+  // portada
+  .heading {
+    img {
+      width: 32%;
+      height: 14%;
+      // }
+    }
+  }
+
+  #carrousel_fotos .carousel {
+    // position: relative;
+    height: 24vh;
+  }
+
+  #map {
+    margin: 3% -84px;
+  }
+}
