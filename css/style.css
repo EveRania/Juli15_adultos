@@ -199,8 +199,12 @@
 .btn {
   font-family: "Roboto", sans-serif; }
 
+.separador_gris {
+  max-width: 100%;
+  background-color: #fefefe; }
+
 #carrousel_fotos {
-  margin-top: 85px; }
+  background-color: #f0f1e9; }
 
 .carousel-wrapper {
   width: 100%;
