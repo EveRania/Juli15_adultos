@@ -200,7 +200,8 @@
   font-family: "Roboto", sans-serif; }
 
 .separador_gris {
-  max-width: 100%; }
+  max-width: 100%;
+  background-color: #fefefe; }
 
 #carrousel_fotos {
   padding: 2% 0px;
@@ -404,7 +405,9 @@
   #carrousel_fotos .carousel {
     height: 24vh; }
   #map {
-    margin: 3% -84px; } }
+    margin: 3% 0px; }
+    #map .mapita .derecha .foto_salon {
+      max-width: 75%; } }
 
 /*!
    * Bootstrap  v5.3.3 (https://getbootstrap.com/)

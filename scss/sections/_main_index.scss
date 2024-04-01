@@ -141,6 +141,7 @@
 
 .separador_gris {
   max-width: 100%;
+  background-color: #fefefe;
 }
 
 #carrousel_fotos {
@@ -444,6 +445,9 @@
   }
 
   #map {
-    margin: 3% -84px;
+    margin: 3% 0px;
+    .mapita .derecha .foto_salon {
+      max-width: 75%;
+    }
   }
 }
