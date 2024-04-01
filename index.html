@@ -57,11 +57,11 @@
         <!-- Portada -->
         <section id="portada">
             <section id="portada_foto">
-              
+
                 </div>
 
             </section>
-           
+
             <section id="portada_texto">
                 <div class="heading">
                     <img src="./assets/entera.png" alt="">
@@ -101,9 +101,7 @@
             <a id="RSVP" class="btn btn-outline-danger d-grid gap-2 col-2 mx-auto" href="https://wa.link/humdr1"
                 target="_blank" role="button">Confirmar
                 asistencia</a>
-            <!-- <button type="button" class="btn btn-"></button> -->
 
-            <!-- <a href="#" class="boton"></a> -->
             <p class="textos">SALON CLUB SAN MARINENSES</p>
             <p class="textos">JAURETCHE 607</p>
             <!-- boton a mapa -->
@@ -112,44 +110,40 @@
             <p class="textos">Confirmar asistencia hasta el 17/04</p>
         </section>
 
-        <!-- <span>
-            <br><br>
-        </span> -->
         <img class="separador_gris" src="./assets/curva_gris.png" alt="">
 
         <section id="carrousel_fotos">
             <h2 class="h2">Un recorrido de estos 15 años...</h2>
             <p class="textos">Junto a personas que son muy importantes en mi vida</p>
 
-            <section class="carousel">
-                <ol class="carousel__viewport">
-                    <li class="carousel__slide">
-                        <div class="carousel__snapper" style="background-image: url('./assets/juli2.png')">
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__snapper" style="background-image: url('./assets/juliprdu_dh.jpg')">
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__snapper" style="background-image: url('./assets/juliprodu_amarillo.jpg')">
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__snapper" style="background-image: url('./assets/juliprodu_dh2.jpg')">
-                        </div>
-                    </li>
-                    <li class="carousel__slide">
-                        <div class="carousel__snapper" style="background-image: url('./assets/juliprodu_night.jpg')">
-                        </div>
-                    </li>
-                    <!-- <li class="carousel__slide">
-                        <div class="carousel__snapper" style="background-image: url('./assets/juli_dh_2.jpg')">
-                        </div>
-                    </li> -->
-                </ol>
 
-            </section>
+            <div class="carousel-wrapper">
+                <!-- Slides -->
+                <div class="slide" data-slide>
+                    <img src="./assets/juli2.png">
+                </div>
+                <div class="slide" data-slide>
+                    <img src="./assets/juliprdu_dh.jpg">
+                </div>
+                <div class="slide" data-slide>
+                    <img src="./assets/juliprodu_amarillo.jpg" alt="Image">
+                </div>
+                <div class="slide" data-slide>
+                    <img src="./assets/juliprodu_dh2.jpg" alt="Image">
+                </div>
+                <div class="slide" data-slide>
+                    <img src="./assets/juliprodu_night.jpg" alt="Image">
+                </div>
+
+                <!-- Next and Previous Buttons -->
+                <button class="btn previous" data-button="previous">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="btn next" data-button="next">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+
         </section>
         <!-- Regalos -->
         <section id="regalos">
@@ -177,17 +171,7 @@
         <section id="firmas">
             <h2 class="h2">Libro de firmas</h2>
             <p class="textos">Si querés dejarme un mensaje poder hacerlo aca</p>
-            <!-- <form class="form_firmas" enctype="text/plain" action="mailto:julifaraoni15@gmail.com" method="post">
-               
-                <input class="nombre" type="text" placeholder="Nombre" name="nombre">
-                <br>
-                <textarea class="nombre" name="mensaje" id="" placeholder="Escribi aca tu mensaje para Juli" cols="50"
-                    rows="10"></textarea>
-                <br>
-                <input id="mybtn" class="btn btn-outline-danger d-grid gap-2 col-4 mx-auto" role="button" type="submit"
-                    value="Enviar">
 
-            </form> -->
             <script src="https://cdn03.jotfor.ms/static/prototype.forms.js?v=3.3.52905" type="text/javascript"></script>
             <script src="https://cdn01.jotfor.ms/static/jotform.forms.js?v=3.3.52905" type="text/javascript"></script>
 
@@ -217,8 +201,8 @@
                     JotForm.paymentExtrasOnTheFly([null, { "name": "heading", "qid": "1", "text": "Formulario", "type": "control_head" }, { "name": "submit2", "qid": "2", "text": "Enviar", "type": "control_button" }, { "description": "", "name": "nombre", "qid": "3", "subLabel": "", "text": "Nombre", "type": "control_textbox" }, { "description": "", "mde": "No", "name": "dejameTu", "qid": "4", "subLabel": "", "text": "Dejame tu mensaje", "type": "control_textarea", "wysiwyg": "Disable" }]);
                 }, 20); 
             </script>
-            <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/stylebuilder/static/form-common.css?v=d0f72cd
-" />
+            <link type="text/css" rel="stylesheet"
+                href="https://cdn02.jotfor.ms/stylebuilder/static/form-common.css?v=d0f72cd" />
             <style type="text/css">
                 @media print {
                     * {
@@ -251,7 +235,6 @@
             <link type="text/css" rel="stylesheet"
                 href="https://cdn02.jotfor.ms/css/styles/payment/payment_feature.css?3.3.52905" />
             <style type="text/css" id="form-designer-style">
-                /* Injected CSS Code */
                 /*PREFERENCES STYLE*/
                 .form-all {
                     font-family: Roboto, sans-serif;
@@ -294,6 +277,7 @@
                 .form-all {
                     color: #2c3344;
                 }
+
                 .form-label-top,
                 .form-label-left,
                 .form-label-right,

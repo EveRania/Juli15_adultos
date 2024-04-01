@@ -45,18 +45,12 @@
     justify-content: space-around;
 
     .header_izq {
-      // text-align: left;
-      // margin-right: 30px;
-      // text-align: center;
-      // max-width: 100%;
-
       .h4 {
         max-width: 100%;
       }
 
       a {
         text-decoration: none;
-        // margin-right: 30px;
       }
     }
     .textos {
@@ -84,11 +78,8 @@
 }
 
 #portada_foto {
-  // background-color: red;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
     url(../assets/juliprodu_horizontal.jpg);
-  // background-image: url(../assets/juliprodu_horizontal.jpg);
-  // min-height: 200vh;
   height: 587px;
   background-position: center center;
   background-size: cover;
@@ -101,7 +92,6 @@
     display: flex;
     justify-content: space-around;
     .texto_heading {
-      // padding-top: 10%;
     }
   }
   .p_heading {
@@ -133,8 +123,6 @@
   }
 }
 
-// }
-
 .btn {
   font-family: $textos;
 }
@@ -144,109 +132,53 @@
   background-color: #fefefe;
 }
 
-#carrousel_fotos {
-  * {
-    box-sizing: border-box;
-    scrollbar-color: transparent transparent; /* thumb and track color */
-    scrollbar-width: 0px;
-  }
+.carousel-wrapper {
+  width: 100%;
+  max-width: 55%;
+  aspect-ratio: 9/9;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+}
 
-  *::-webkit-scrollbar {
-    width: 0;
-  }
+.slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  position: absolute;
+  transition: transform 300ms ease-out;
+}
 
-  *::-webkit-scrollbar-track {
-    background: transparent;
-  }
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background: transparent;
-    border: none;
-  }
+.carousel-wrapper .btn {
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: #00c2d8;
+  padding: 8px 10px;
+  border-radius: 50%;
+  border: none;
+  margin: 10px;
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.carousel-wrapper .btn:hover {
+  background: rgba(0, 0, 0, 1);
+}
 
-  * {
-    -ms-overflow-style: none;
-  }
-
-  padding: 2% 0px;
-  background-color: $fondo_gris;
-  .carousel {
-    ol,
-    li {
-      // background-color: red;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    position: relative;
-    // width: 100%;
-    height: 50vh;
-    perspective: 500px;
-    overflow: hidden;
-
-    .carousel__viewport {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: flex;
-      overflow-x: scroll;
-      counter-reset: item;
-      scroll-behavior: smooth;
-      scroll-snap-type: x mandatory;
-      
-    }
-
-    .carousel::before,
-    .carousel::after {
-      content: "";
-      position: absolute;
-      z-index: 2;
-      left: 50%;
-      translate: -50% 0;
-      width: 500%;
-      height: 500%;
-      border-radius: 50%;
-      background: $fondo_gris;
-    }
-
-    .carousel::before {
-      top: -480%;
-    }
-
-    .carousel::after {
-      bottom: -480%;
-    }
-
-    .carousel__slide {
-      position: relative;
-      flex: 0 0 28.33%;
-      width: 25%;
-      counter-increment: item;
-    }
-
-    .carousel__slide:before {
-      content: counter(item);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate3d(-50%, -40%, 70px);
-    }
-
-    .carousel__snapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      scroll-snap-align: center;
-      background-size: cover;
-      background-position: 50%;
-      border: 10px solid;
-      color: $fondo_gris;
-    }
-  }
+.btn.previous {
+  top: 50%;
+  left: 0;
+}
+.btn.next {
+  top: 50%;
+  right: 0;
 }
 
 #regalos {
@@ -275,7 +207,6 @@
   border: 1px solid #888;
   box-shadow: 0px 0px 15px 10px grey;
   border: 1px solid #888;
-  // width: 50%;
   max-width: 30%;
   border-radius: 100px;
   padding: 2%;
@@ -294,7 +225,6 @@
 .close {
   color: #aaa;
   text-align: right;
-  // float: right;
   font-size: 28px;
   font-weight: bold;
 }
@@ -306,7 +236,6 @@
 }
 
 #firmas {
-  // background-color: blueviolet;
   background: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.15),
@@ -317,22 +246,8 @@
   background-size: 100%;
   padding-top: 7%;
   padding-bottom: 4%;
-  // position: sticky;
-  // .form_firmas {
-  //   max-width: 25%;
-  //   margin: auto;
-  //   background-color: rgba(255, 0, 0, 0);
-  //   border-radius: 40px;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: stretch;
-  // .nombre,
-  // .mensaje {
-  //   border-radius: 5px;
-  //   border: none;
 }
-// }
-// }
+
 #map {
   margin: 3% 0;
   .mapita {
@@ -359,9 +274,7 @@
 
     .footer_izq {
       text-align: left;
-      // margin-right: 30px;
       text-align: center;
-      // max-width: 100%;
       padding-top: 3vh;
 
       .h4 {
@@ -370,7 +283,6 @@
 
       a {
         text-decoration: none;
-        // margin-right: 30px;
       }
       .textos {
         color: #fefefe;
@@ -420,10 +332,6 @@
   }
   // header
   #navigation_bar .navigation_bar {
-    // .h4,
-    // .textos {
-    //   text-align: center;
-    // }
     justify-content: center;
 
     .nav .nav-item {
@@ -436,21 +344,23 @@
     img {
       width: 32%;
       height: 14%;
-      // }
     }
   }
 
-  #carrousel_fotos .carousel {
-    // position: relative;
-    height: 45vh;
-    // width: 45vw;
-    width: 267vw;
-  }
-
-  #map {
-    margin: 3% 0px;
-    .mapita .derecha .foto_salon {
-      max-width: 75%;
+  #carrousel_fotos {
+    overflow: hidden, scroll;
+    .carousel {
+      height: 45vh;
+      width: 100vw;
+      .carousel__viewport {
+        left: -190px;
+      }
+    }
+    #map {
+      margin: 3% 0px;
+      .mapita .derecha .foto_salon {
+        max-width: 75%;
+      }
     }
   }
 }
