@@ -356,11 +356,20 @@
         left: -190px;
       }
     }
-    #map {
-      margin: 3% 0px;
-      .mapita .derecha .foto_salon {
-        max-width: 75%;
-      }
+  }
+  #myModal{
+  .modal-content {
+    flex-direction: row;
+    flex-direction: row;
+    max-width: 80%;
+    margin: auto;
+        margin-top: 40%;
+  }
+}
+  #map {
+    margin: 3% 0px;
+    .mapita .derecha .foto_salon {
+      max-width: 75%;
     }
   }
 }

@@ -377,10 +377,16 @@
       width: 100vw; }
       #carrousel_fotos .carousel .carousel__viewport {
         left: -190px; }
-    #carrousel_fotos #map {
-      margin: 3% 0px; }
-      #carrousel_fotos #map .mapita .derecha .foto_salon {
-        max-width: 75%; } }
+  #myModal .modal-content {
+    flex-direction: row;
+    flex-direction: row;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 40%; }
+  #map {
+    margin: 3% 0px; }
+    #map .mapita .derecha .foto_salon {
+      max-width: 75%; } }
 
 /*!
    * Bootstrap  v5.3.3 (https://getbootstrap.com/)
