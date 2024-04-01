@@ -223,7 +223,7 @@
   #carrousel_fotos .carousel {
     position: relative;
     height: 50vh;
-    perspective: 100px;
+    perspective: 500px;
     overflow: hidden; }
     #carrousel_fotos .carousel ol,
     #carrousel_fotos .carousel li {
@@ -403,7 +403,8 @@
     width: 32%;
     height: 14%; }
   #carrousel_fotos .carousel {
-    height: 24vh; }
+    height: 45vh;
+    width: 267vw; }
   #map {
     margin: 3% 0px; }
     #map .mapita .derecha .foto_salon {
