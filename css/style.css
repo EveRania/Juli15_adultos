@@ -204,7 +204,8 @@
   background-color: #fefefe; }
 
 #carrousel_fotos {
-  background-color: #f0f1e9; }
+  background-color: #f0f1e9;
+  margin-bottom: 4%; }
 
 .carousel-wrapper {
   width: 100%;
@@ -228,10 +229,9 @@
   border-radius: inherit; }
 
 .carousel-wrapper .btn {
-  font-size: 2rem;
+  font-size: 90%;
   background: rgba(0, 0, 0, 0.7);
   color: #00c2d8;
-  padding: 8px 10px;
   border-radius: 50%;
   border: none;
   margin: 10px;
@@ -329,7 +329,7 @@
   #footer .footer .footer_izq {
     text-align: left;
     text-align: center;
-    padding-top: 3vh; }
+    padding-top: 1vh; }
     #footer .footer .footer_izq .h4 {
       max-width: 100%; }
     #footer .footer .footer_izq a {
@@ -338,7 +338,8 @@
       color: #fefefe;
       font-size: 14px; }
   #footer .footer .footer_der {
-    text-align: right; }
+    text-align: right;
+    margin-top: 1%; }
     #footer .footer .footer_der li {
       list-style: none; }
       #footer .footer .footer_der li a {
